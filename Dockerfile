@@ -21,7 +21,7 @@ FROM alpine
 RUN apk add --no-cache libstdc++
 COPY --from=build /ssdb/ /ssdb/
 
-EXPOSE 8890
+EXPOSE 8888
 VOLUME /ssdb/var
 
 CMD ["/ssdb/ssdb-server", "/ssdb/ssdb.conf"]
